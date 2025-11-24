@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            padding: 20px 40px;
+            background-color: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #e50914;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .hero {
+            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1574267432644-f86d8e31e4ac?w=1200') center/cover;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        .hero-content h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .hero-content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            max-width: 500px;
+        }
+
+        .btn {
+            padding: 10px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .btn-play {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .btn-info {
+            background-color: rgba(255,255,255,0.3);
+            color: #fff;
+        }
+
+        .movies {
+            padding: 40px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .movie-row {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+        }
+
+        .movie-card {
+            min-width: 200px;
+            height: 300px;
+            background-color: #333;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .movie-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">NETFLIX</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">TV Shows</a>
+            <a href="#">Movies</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Stranger Things</h1>
+            <p>A young boy vanishes in a small town, uncovering secret experiments and supernatural forces.</p>
+            <button class="btn btn-play">▶ Play</button>
+            <button class="btn btn-info">More Info</button>
+        </div>
+    </div>
+
+    <div class="movies">
+        <h2 class="section-title">Trending Now</h2>
+        <div class="movie-row">
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1594908900066-3f47337549d8?w=400')"></div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=400')"></div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400')"></div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1574267432644-f86d8e31e4ac?w=400')"></div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1512070679279-8988d32161be?w=400')"></div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=400')"></div>
+        </div>
+
+        <h2 class="section-title">Popular on Netflix</h2>
+        <div class="movie-row">
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400')"></div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400')"></div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1611003228941-98852ba62227?w=400')"></div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=400')"></div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=400')"></div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1579389083078-4e7018379f7e?w=400')"></div>
+        </div>
+
+        <h2 class="section-title">Action Movies</h2>
+        <div class="movie-row">
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=400')"></div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=400')"></div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1569003339405-ea396a5a8a90?w=400')"></div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1473186578172-c141e6798cf4?w=400')"></div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1574267432644-f86d8e31e4ac?w=400')"></div>
+            <div class="movie-card" style="background-image: url('https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=400')"></div>
+        </div>
+    </div>
+</body>
+</html>
